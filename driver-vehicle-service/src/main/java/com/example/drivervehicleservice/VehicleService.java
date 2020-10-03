@@ -12,7 +12,7 @@ public class VehicleService {
 
     public Vehicle getVehicle(Long id) {
         return restTemplate.getForObject(
-                "http://localhost:8085/vehicles/" + id,
+                "http://vehicle-service/vehicles/" + id,
                 Vehicle.class);
     }
 }

@@ -12,13 +12,13 @@ public class PlaceService {
 
     public Place getPlaces(Long id) {
         return restTemplate.getForObject(
-                "http://localhost:8084/places/" + id,
+                "http://place-service/places/" + id,
                 Place.class);
     }
 
     public void setStatus(Long id, String address) {
         restTemplate.getForObject(
-                "http://localhost:8084/places/setStatus/" + id + address,
+                "http://place-service/places/setStatus/" + id + address,
                 Place.class);
     }
 }

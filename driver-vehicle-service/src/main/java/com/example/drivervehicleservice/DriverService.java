@@ -11,7 +11,7 @@ public class DriverService {
 
     public Driver getDriver(Long id) {
         return restTemplate.getForObject(
-                "http://localhost:8081/drivers/" + id,
+                "http://driver-service/drivers/" + id,
                 Driver.class);
     }
 }

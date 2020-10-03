@@ -16,7 +16,10 @@ public class DriverVehicleApi {
 
     @Autowired
     private DriverVehicleRepository driverVehicleRepository;
-
+    @GetMapping("")
+    public List<DriverVehicle> driverVehicles(){
+        return driverVehicleRepository.findAll();
+    }
     @GetMapping("/{id}")
     public DriverVehicle getById(@PathVariable Long id){
         return driverVehicleRepository.findById(id).get();

@@ -12,7 +12,7 @@ public class DriverVehicleService {
 
     public DriverVehicle getDriverVehicleId(Long id) {
         return restTemplate.getForObject(
-                "http://localhost:8082/api/driverVeh/" + id,
+                "http://driver-vehicle-service/api/driverVeh/" + id,
                 DriverVehicle.class);
     }
 }
